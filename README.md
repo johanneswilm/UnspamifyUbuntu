@@ -31,7 +31,6 @@ The package includes minimal Python stubs that prevent crashes in Ubuntu system 
  Conflicts: ubuntu-advantage-tools, ubuntu-advantage-desktop-daemon, ubuntu-pro-client
  Breaks: ubuntu-advantage-tools, ubuntu-advantage-desktop-daemon, ubuntu-pro-client
  Provides: ubuntu-advantage-tools (= 65535:65535), ubuntu-advantage-desktop-daemon (= 65535:65535), ubuntu-pro-client (= 65535:65535)
- Depends: distro-info (>= 0.18ubuntu0.18.04.1)
  Description: Stub replacement for ubuntu-advantage-tools that prevents advertisements
   This package provides minimal Python stubs for the uaclient module to prevent
   crashes in Ubuntu system tools (UpdateManager, software-properties-gtk) when
@@ -82,6 +81,12 @@ sudo pro config set apt_news=false
 ```
 
 If you don't need pro features, I recommend Option 1 instead as the flag isn't well documented and may change in future (or I personally think it likely ubuntu advantage may add more types of spam with different flags in future requiring more undocumented flags be set.  Removing the source of the spam as in Option 1 seems more likely to fully nip the problem in the bud).
+
+## Removal Instructions -- Option 3: Non-stub package (deprecated)
+
+Similar to option #1, we also provide [instructions](fake-ubuntu-advantage-tools-legacy-nonstub) on how to swap ubuntu-advantage-tools out with a fake package that
+contains no code.  However, this requires making modifications to software properties & update manager so it is no
+longer recommended.
 
 # Remove ESM Apps MOTD Spam 
 
