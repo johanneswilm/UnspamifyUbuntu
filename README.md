@@ -56,6 +56,10 @@ The following NEW packages will be installed:
 ```
 5. **That's it!** No more ads and no patches needed! The Python stubs in the package ensure that UpdateManager and other system tools continue to work without modifications.
 
+Optional:  The real `ubuntu-advantage-tools` seems to be the only package that depends on `distro-info`.  It does not appear to
+be necessary to keep this tool, but if you want it, you can explicitly keep it installed via `apt install distro-info`.
+If you do not, your system may prompt you to automatically remove it later on.
+
 ### Prevent APT trying to start spammy uninstalled services
 
 You may start to get these warnings:
